@@ -22,8 +22,8 @@ public class LambdaExpression {
     /**
      * Lambda expression as a parameter
      *
-     * @param a first parameter to compare
-     * @param b second parameter to compare
+     * @param a  first parameter to compare
+     * @param b  second parameter to compare
      * @param op boolean operator
      * @return true if two parameters are equal, false if not
      */
@@ -31,3 +31,6 @@ public class LambdaExpression {
         return op.comparing(a, b);
     }
 }
+
+
+

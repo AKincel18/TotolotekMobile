@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.EnteringNumbersActivity">
+
+    <Button
+        android:id="@+id/drawNumbersButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/draw_numbers"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number6" />
+
+    <EditText
+        android:id="@+id/number6"
+        android:layout_width="74dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/number6TextView"
+        app:layout_constraintTop_toBottomOf="@+id/number5" />
+
+    <EditText
+        android:id="@+id/number5"
+        android:layout_width="74dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/number5TextView"
+        app:layout_constraintTop_toBottomOf="@+id/number4" />
+
+    <EditText
+        android:id="@+id/number4"
+        android:layout_width="74dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/number4TextView"
+        app:layout_constraintTop_toBottomOf="@+id/number3" />
+
+    <EditText
+        android:id="@+id/number3"
+        android:layout_width="74dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/number3TextView"
+        app:layout_constraintTop_toBottomOf="@+id/number2" />
+
+    <EditText
+        android:id="@+id/number2"
+        android:layout_width="74dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/number2TextView"
+        app:layout_constraintTop_toBottomOf="@+id/number1" />
+
+    <EditText
+        android:id="@+id/number1"
+        android:layout_width="74dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="52dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/number1TextView"
+        app:layout_constraintTop_toBottomOf="@+id/enterNumbersTextView" />
+
+    <TextView
+        android:id="@+id/welcomingTextView"
+        android:layout_width="217dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/welcome_in_lottery"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/enterNumbersTextView"
+        android:layout_width="340dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/enter_number_txt"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/welcomingTextView"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/welcomingTextView"
+        app:layout_constraintTop_toBottomOf="@+id/welcomingTextView" />
+
+    <TextView
+        android:id="@+id/number1TextView"
+        android:layout_width="103dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="52dp"
+        android:gravity="center_vertical"
+        android:text="@string/number1_txt"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterNumbersTextView" />
+
+    <TextView
+        android:id="@+id/number3TextView"
+        android:layout_width="103dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="28dp"
+        android:gravity="center_vertical"
+        android:text="@string/number3_txt"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number2TextView" />
+
+    <TextView
+        android:id="@+id/number5TextView"
+        android:layout_width="103dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center_vertical"
+        android:text="@string/number5_txt"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number4TextView" />
+
+    <TextView
+        android:id="@+id/number6TextView"
+        android:layout_width="103dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center_vertical"
+        android:text="@string/number6_txt"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number5TextView" />
+
+    <TextView
+        android:id="@+id/number2TextView"
+        android:layout_width="103dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center_vertical"
+        android:text="@string/number2_txt"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number1TextView" />
+
+    <TextView
+        android:id="@+id/number4TextView"
+        android:layout_width="103dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="28dp"
+        android:gravity="center_vertical"
+        android:text="@string/number4_txt"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number3TextView" />
+
+</android.support.constraint.ConstraintLayout>
