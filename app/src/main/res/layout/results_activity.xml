@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.ResultsActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="@string/results_txt"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/yourNumbersTxt"
+        android:layout_width="134dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/your_numbers_txt"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/userNumbers"
+        android:layout_width="193dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/user_numbers"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/yourNumbersTxt"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/points"
+        android:layout_width="193dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/points"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/yourPointsTxt"
+        app:layout_constraintTop_toBottomOf="@+id/drawnNumbers" />
+
+    <TextView
+        android:id="@+id/drawnNumbers"
+        android:layout_width="193dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/drawn_numbers"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/drawnNumbersTxt"
+        app:layout_constraintTop_toBottomOf="@+id/userNumbers" />
+
+    <TextView
+        android:id="@+id/drawnNumbersTxt"
+        android:layout_width="134dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/drawn_numbers_txt"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yourNumbersTxt" />
+
+    <TextView
+        android:id="@+id/yourPointsTxt"
+        android:layout_width="134dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/your_points_txt"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/drawnNumbersTxt" />
+
+</android.support.constraint.ConstraintLayout>

@@ -16,12 +16,7 @@ public class Totolotek implements Serializable {
      * Stores numbers which are drawn by 'lottery machine'.
      */
     //using a vector
-    private Vector<Integer> drawnNumber = new Vector<>(6);
-
-    /**
-     * check if vector was used
-     */
-    private boolean usage = false;
+    private Vector<Integer> drawnNumbers = new Vector<>(6);
 
     /**
      * Stores numbers which are chosen by user.
@@ -38,8 +33,6 @@ public class Totolotek implements Serializable {
      */
     public Totolotek() {
     }
-
-    ;
 
     /**
      * Set number in userArray which user choose to drawing.
@@ -65,8 +58,8 @@ public class Totolotek implements Serializable {
      *
      * @param vec number which is lottery drawing
      */
-    public void setDrawnNumber(Vector<Integer> vec) {
-        drawnNumber = vec;
+    public void setDrawnNumbers(Vector<Integer> vec) {
+        drawnNumbers = vec;
     }
 
     /**
@@ -76,7 +69,7 @@ public class Totolotek implements Serializable {
      * @return number on the posision in parameter
      */
     public int getDrawnNumber(int i) {
-        return drawnNumber.get(i);
+        return drawnNumbers.get(i);
     }
 
     /**
@@ -104,7 +97,7 @@ public class Totolotek implements Serializable {
      * @return drawingArray
      */
     public Vector<Integer> getDrawnArray() {
-        return drawnNumber;
+        return drawnNumbers;
     }
 
     /**
@@ -117,66 +110,37 @@ public class Totolotek implements Serializable {
     }
 
     /**
-     * Initialization vector
-     */
-    private void initVec() {
-        drawnNumber.add(0);
-        drawnNumber.add(0);
-        drawnNumber.add(0);
-        drawnNumber.add(0);
-        drawnNumber.add(0);
-        drawnNumber.add(0);
-        usage = true;
-    }
-
-    /**
      * Method which draw six random numbers between 1 and 49, it is necessary to
      * protection that the numbers do not repeat.
      *
      */
     public void drawing() {
         Random rand = new Random();
-        int temp;
-        boolean check;
-        if (!usage) {
-            initVec();
-
-        }
+        drawnNumbers.clear();
+        int n;
         for (int i = 0; i < 6; i++) {
-
+            boolean isRepeated;
             do {
-                check = true;
-                temp = rand.nextInt(49) + 1;
-                for (int ii = 0; ii < i; ii++) {
-                    //check if drawing number is repeated in another number in array
-                    // if YES drawing once again
-                    if (temp == drawnNumber.get(ii)) {
-                        check = false;
-                        break;
-                    }
-
-                }
-            } while (!check);
-
-            drawnNumber.set(i, temp);
+                int drawnNumber = rand.nextInt(49) + 1;
+                n = drawnNumber;
+                isRepeated = drawnNumbers.stream().anyMatch(number -> number == drawnNumber);
+            } while (isRepeated);
+            drawnNumbers.add(n);
         }
-        check();
+        calculatePoints();
     }
 
     /**
-     * Method which check how many numbers user hit.
+     * Method which check how many numbers user scored.
      */
-    public void check() {
+    public void calculatePoints() {
         points = 0;
-        for (int i = 0; i < userArray.length; i++) {
-            for (int j = 0; j < drawnNumber.size(); j++) {
-                if (userArray[i] == drawnNumber.get(j)) {
+        for (int value : userArray) {
+            drawnNumbers.forEach(number -> {
+                if (value == number)
                     points++;
-                    break;
-                }
-            }
+            });
         }
-
     }
 
     /**
@@ -199,7 +163,7 @@ public class Totolotek implements Serializable {
      * @param arr array where are all numbers which user choose
      * @throws MyException throw own exception
      */
-    public void isRepeatable(int arr[]) throws MyException {
+    public void isRepeatable(int[] arr) throws MyException {
         //create object to use lambda expression
         LambdaExpression Obj = new LambdaExpression();
         //implementations of the lambda expressions: return true if parameters are equal
@@ -214,7 +178,4 @@ public class Totolotek implements Serializable {
             }
         }
     }
-
-
-
 }

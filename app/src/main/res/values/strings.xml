@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">Totolotek</string>
+    <string name="draw_numbers">DRAW NUMBERS</string>
+    <string name="welcome_in_lottery">Welcome in lottery!</string>
+    <string name="enter_number_txt">Please enter 6 numbers between 1 and 49:</string>
+    <string name="number1_txt">Number 1:</string>
+    <string name="number3_txt">Number 3:</string>
+    <string name="number5_txt">Number 5:</string>
+    <string name="number6_txt">Number 6:</string>
+    <string name="number2_txt">Number 2:</string>
+    <string name="number4_txt">Number 4:</string>
+    <string name="results_txt">Results</string>
+    <string name="your_numbers_txt">Your numbers:</string>
+    <string name="user_numbers">User numbers</string>
+    <string name="points">points</string>
+    <string name="drawn_numbers">Drawn numbers</string>
+    <string name="drawn_numbers_txt">Drawn numbers:</string>
+    <string name="your_points_txt">Your points:</string>
 </resources>

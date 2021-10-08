@@ -23,7 +23,7 @@ public class MyException extends Exception {
      * This method shows what exception has occurred and what number causes this
      * exception.
      *
-     * @param message inform what is the exception
+     * @param message         inform what is the exception
      * @param exceptionNumber inform what number causes exception
      */
     MyException(String message, int exceptionNumber) {
@@ -41,4 +41,5 @@ public class MyException extends Exception {
     }
 
 }
+
 
